@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#gameBoard {
+  position: relative;
+  width: 500px;
+  margin: 20px auto;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: repeat(10, 50px);
+  position: relative;
+  z-index: 1;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.cell {
+  border: 1px solid #333;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  position: relative;
+}
+
+.token {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  transition: transform 0.3s linear;
+}
+
+
+.p0 { background: red; }
+.p1 { background: blue; }
+.p2 { background: green; }
+.p3 { background: purple; }
+.p4 { background: yellow; }
+.p5 { background: rgb(203, 8, 213); }
+.p6 { background: rgb(92, 3, 78); }
+.p7 { background: rgb(128, 38, 0); }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Snake & Ladders</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div id="presplash">
+  <h2>Select Players</h2>
+  <select onchange="startGame(this.value)">
+    <option value="2">2 Players</option>
+    <option value="3">3 Players</option>
+    <option value="4">4 Players</option>
+    <option value="5">5 Players</option>
+    <option value="6">6 Players</option>
+    <option value="7">7 Players</option>
+    <option value="8">8 Players</option>
+  </select>
+</div>
+
+<div id="game" hidden>
+  <button onclick="rollDice()">🎲 Roll Dice</button>
+  <p id="info"></p>
+
+  <div id="gameBoard">
+    <canvas id="overlay" width="500" height="500"></canvas>
+    <div id="board"></div>
+  </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
